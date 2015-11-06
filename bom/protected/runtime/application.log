@@ -1,0 +1,9 @@
+2015/11/06 16:37:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "bom/assets/global/plugins/slider-layer-slider/skins/fullwidth/skin.css"' in C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('bom/assets/glob...')
+#1 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/botasbom/bom/bom/assets/global/plugins/slider-layer-slider/skins/fullwidth/skin.css
+HTTP_REFERER=http://localhost/botasbom/bom/site/index
+---

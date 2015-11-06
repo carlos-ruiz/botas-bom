@@ -1,0 +1,28 @@
+.site-logo {
+	padding: 15px 0 !important;
+}
+
+.header-navigation {
+	float: right;
+}
+
+.ecommerce .header {
+	position: fixed !important;
+	top: 0;
+	width: 100%;
+	margin: 0 !important;
+}
+
+.ecommerce .page-slider {
+	margin: 0 !important;
+}
+
+.social-icons {
+	float: right;
+}
+
+.layout-content h1{
+	width: 90%;
+	margin: 20px auto;
+	color: #E02222;
+}

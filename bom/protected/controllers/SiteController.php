@@ -2,6 +2,7 @@
 
 class SiteController extends Controller
 {
+	public $section;
 	/**
 	 * Declares class-based actions.
 	 */
@@ -27,6 +28,7 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$this->section = "index";
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
@@ -105,5 +107,23 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+
+	public function actionAboutUs()
+	{
+		$this->section = "aboutUs";
+		$this->render('about-us');
+	}
+
+	public function actionMision()
+	{
+		$this->section = "mision";
+		$this->render('mision');
+	}
+
+	public function actionVision()
+	{
+		$this->section = "vision";
+		$this->render('vision');
 	}
 }
