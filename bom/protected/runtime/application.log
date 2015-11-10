@@ -7,3 +7,115 @@ Stack trace:
 REQUEST_URI=/botasbom/bom/bom/assets/global/plugins/slider-layer-slider/skins/fullwidth/skin.css
 HTTP_REFERER=http://localhost/botasbom/bom/site/index
 ---
+2015/11/06 20:07:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "favicon.ico"' in C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/botasbom/bom/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/
+---
+2015/11/06 20:08:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('site/favicon.ic...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/site/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/site/aboutUs
+---
+2015/11/06 20:08:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "bom/assets/global/plugins/slider-layer-slider/skins/fullwidth/skin.css"' in C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('bom/assets/glob...')
+#1 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/botasbom/bom/bom/assets/global/plugins/slider-layer-slider/skins/fullwidth/skin.css
+HTTP_REFERER=http://localhost/botasbom/bom/site/index
+---
+2015/11/06 20:08:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "bom/assets/global/plugins/slider-layer-slider/css/blank.gif"' in C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('bom/assets/glob...')
+#1 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/botasbom/bom/bom/assets/global/plugins/slider-layer-slider/css/blank.gif
+HTTP_REFERER=http://localhost/botasbom/bom/site/index
+---
+2015/11/10 08:39:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "favicon.ico"' in C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/botasbom/bom/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/
+---
+2015/11/10 08:46:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('site/favicon.ic...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/site/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/site/login
+---
+2015/11/10 08:46:37 [error] [exception.CException] exception 'CException' with message 'La propiedad "CategoriesController"."section" no se encuentra definida.' in C:\xampp\htdocs\botasbom\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\bom\protected\views\layouts\main.php(82): CComponent->__get('section')
+#1 C:\xampp\htdocs\botasbom\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\botasbom\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\botasbom\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\botasbom\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#5 C:\xampp\htdocs\botasbom\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#6 C:\xampp\htdocs\botasbom\framework\web\CBaseController.php(214): COutputProcessor->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CBaseController.php(308): CBaseController->endWidget('CContentDecorat...')
+#8 C:\xampp\htdocs\botasbom\bom\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#9 C:\xampp\htdocs\botasbom\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\botasbom\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\botasbom\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\botasbom\bom\protected\controllers\CategoriesController.php(79): CController->render('create', Array)
+#13 C:\xampp\htdocs\botasbom\framework\web\actions\CInlineAction.php(49): CategoriesController->actionCreate()
+#14 C:\xampp\htdocs\botasbom\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('categories/crea...')
+#24 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/botasbom/bom/categories/create
+HTTP_REFERER=http://localhost/botasbom/bom/site/login
+---
+2015/11/10 08:47:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('categories/favi...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/categories/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/categories/create
+---
+2015/11/10 08:47:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('profiles/favico...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/profiles/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/profiles/create
+---
