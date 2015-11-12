@@ -10,11 +10,10 @@
  * @property string $price
  * @property string $size
  * @property integer $status
- * @property integer $id_categories
  *
  * The followings are the available model relations:
  * @property ProductImages[] $productImages
- * @property Categories $idCategories
+ * @property ProductsHasCategories[] $productsHasCategories
  */
 class Products extends CActiveRecord
 {
@@ -34,15 +33,15 @@ class Products extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, status, id_categories', 'required'),
-			array('status, id_categories', 'numerical', 'integerOnly'=>true),
+			array('name, status', 'required'),
+			array('status', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>100),
 			array('description', 'length', 'max'=>512),
 			array('price', 'length', 'max'=>7),
 			array('size', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, description, price, size, status, id_categories', 'safe', 'on'=>'search'),
+			array('id, name, description, price, size, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,8 +53,8 @@ class Products extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'productImages' => array(self::HAS_MANY, 'ProductImages', 'products_id'),
-			'idCategories' => array(self::BELONGS_TO, 'Categories', 'id_categories'),
+			'images' => array(self::HAS_MANY, 'ProductImages', 'products_id'),
+			'categories' => array(self::HAS_MANY, 'ProductsHasCategories', 'id_products'),
 		);
 	}
 
@@ -66,12 +65,11 @@ class Products extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'description' => 'Description',
-			'price' => 'Price',
-			'size' => 'Size',
-			'status' => 'Status',
-			'id_categories' => 'Id Categories',
+			'name' => 'Nombre',
+			'description' => 'Descripción',
+			'price' => 'Precio',
+			'size' => 'Talla',
+			'status' => 'Estatus',
 		);
 	}
 
@@ -99,7 +97,6 @@ class Products extends CActiveRecord
 		$criteria->compare('price',$this->price,true);
 		$criteria->compare('size',$this->size,true);
 		$criteria->compare('status',$this->status);
-		$criteria->compare('id_categories',$this->id_categories);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

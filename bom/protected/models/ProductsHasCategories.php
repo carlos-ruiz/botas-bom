@@ -1,23 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "profiles".
+ * This is the model class for table "products_has_categories".
  *
- * The followings are the available columns in table 'profiles':
+ * The followings are the available columns in table 'products_has_categories':
  * @property integer $id
- * @property string $name
+ * @property integer $id_products
+ * @property integer $id_categories
  *
  * The followings are the available model relations:
- * @property Users[] $users
+ * @property Categories $idCategories
+ * @property Products $idProducts
  */
-class Profiles extends CActiveRecord
+class ProductsHasCategories extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'profiles';
+		return 'products_has_categories';
 	}
 
 	/**
@@ -28,11 +30,11 @@ class Profiles extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
-			array('name', 'length', 'max'=>45),
+			array('id_products, id_categories', 'required'),
+			array('id_products, id_categories', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name', 'safe', 'on'=>'search'),
+			array('id, id_products, id_categories', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -44,7 +46,8 @@ class Profiles extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'users' => array(self::HAS_MANY, 'Users', 'id_profiles'),
+			'category' => array(self::BELONGS_TO, 'Categories', 'id_categories'),
+			'product' => array(self::BELONGS_TO, 'Products', 'id_products'),
 		);
 	}
 
@@ -55,7 +58,8 @@ class Profiles extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'id_products' => 'Producto',
+			'id_categories' => 'Categoría',
 		);
 	}
 
@@ -78,7 +82,8 @@ class Profiles extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('id_products',$this->id_products);
+		$criteria->compare('id_categories',$this->id_categories);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -89,7 +94,7 @@ class Profiles extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Profiles the static model class
+	 * @return ProductsHasCategories the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

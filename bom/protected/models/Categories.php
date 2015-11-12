@@ -8,7 +8,7 @@
  * @property string $name
  *
  * The followings are the available model relations:
- * @property Products[] $products
+ * @property ProductsHasCategories[] $productsHasCategories
  */
 class Categories extends CActiveRecord
 {
@@ -44,7 +44,7 @@ class Categories extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'products' => array(self::HAS_MANY, 'Products', 'id_categories'),
+			'products' => array(self::HAS_MANY, 'ProductsHasCategories', 'id_categories'),
 		);
 	}
 
@@ -55,7 +55,7 @@ class Categories extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'name' => 'Nombre',
 		);
 	}
 

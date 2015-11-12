@@ -27,6 +27,5 @@ $this->menu=array(
 		'price',
 		'size',
 		'status',
-		'id_categories',
 	),
 )); ?>

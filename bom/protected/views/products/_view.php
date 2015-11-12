@@ -29,9 +29,5 @@
 	<?php echo CHtml::encode($data->status); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_categories')); ?>:</b>
-	<?php echo CHtml::encode($data->id_categories); ?>
-	<br />
-
 
 </div>

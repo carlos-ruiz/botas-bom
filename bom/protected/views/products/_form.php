@@ -49,12 +49,6 @@
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_categories'); ?>
-		<?php echo $form->textField($model,'id_categories'); ?>
-		<?php echo $form->error($model,'id_categories'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

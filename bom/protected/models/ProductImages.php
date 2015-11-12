@@ -46,7 +46,7 @@ class ProductImages extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'products' => array(self::BELONGS_TO, 'Products', 'products_id'),
+			'product' => array(self::BELONGS_TO, 'Products', 'products_id'),
 		);
 	}
 
@@ -57,8 +57,8 @@ class ProductImages extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'image_url' => 'Image Url',
-			'products_id' => 'Products',
+			'image_url' => 'Ruta de la imagen',
+			'products_id' => 'Producto',
 		);
 	}
 
