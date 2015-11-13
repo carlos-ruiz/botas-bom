@@ -1,3 +1,9 @@
+.footer {
+	position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
 .site-logo {
 	padding: 15px 0 !important;
 }
@@ -21,8 +27,25 @@
 	float: right;
 }
 
+.layout-content {
+	width: 90%;
+	margin: 0 auto;
+}
+
 .layout-content h1{
 	width: 90%;
 	margin: 20px auto;
 	color: #E02222;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.margin-auto {
+	margin: 0 auto;
+}
+
+.text-right {
+	text-align: right;
 }

@@ -126,4 +126,15 @@ class SiteController extends Controller
 		$this->section = "vision";
 		$this->render('vision');
 	}
+
+	public function init(){
+		if(Users::model()->count()==0){
+			$admin = new Users;
+			$admin->name = "Admin";
+ 			$admin->last_name = "Admin";
+			$admin->username = "admin";
+			$admin->password = base64_encode("admin");
+			$admin->save();
+		}
+	}
 }

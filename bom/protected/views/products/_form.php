@@ -4,8 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
-
+<div class="row">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'products-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
@@ -13,46 +12,98 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
+	'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
+	<div class="form-body col-md-7">
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+		<div class="form-group <?php if($form->error($model,'name')!=''){ echo 'has-error'; }?>">
+			<?php echo $form->labelEx($model,'name', array('class'=>'control-label')); ?>
+			<div class="input-group">
+				<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>65, 'class'=>'form-control')); ?>
+				<?php echo $form->error($model,'name', array('class'=>'help-block')); ?>
+			</div>
+		</div>
 
-	<?php echo $form->errorSummary($model); ?>
+		<div class="form-group <?php if($form->error($model,'description')!=''){ echo 'has-error'; }?>">
+			<?php echo $form->labelEx($model,'description', array('class'=>'control-label')); ?>
+			<div class="input-group">
+				<?php echo $form->textArea($model,'description',array('rows'=>3, 'cols'=>62, 'class'=>'form-control')); ?>
+				<?php echo $form->error($model,'description', array('class'=>'help-block')); ?>
+			</div>
+		</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'name'); ?>
-	</div>
+		<div class="form-group <?php if($form->error($model,'price')!=''){ echo 'has-error'; }?>">
+			<?php echo $form->labelEx($model,'price', array('class'=>'control-label')); ?>
+			<div class="input-group">
+				<?php echo $form->textField($model,'price',array('size'=>60,'maxlength'=>65, 'class'=>'form-control')); ?>
+				<?php echo $form->error($model,'price', array('class'=>'help-block')); ?>
+			</div>
+		</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>512)); ?>
-		<?php echo $form->error($model,'description'); ?>
-	</div>
+		<div class="form-group <?php if($form->error($model,'size')!=''){ echo 'has-error'; }?>">
+			<?php echo $form->labelEx($model,'size', array('class'=>'control-label')); ?>
+			<div class="input-group">
+				<?php echo $form->textField($model,'size',array('size'=>60,'maxlength'=>65, 'class'=>'form-control')); ?>
+				<?php echo $form->error($model,'size', array('class'=>'help-block')); ?>
+			</div>
+		</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'price'); ?>
-		<?php echo $form->textField($model,'price',array('size'=>7,'maxlength'=>7)); ?>
-		<?php echo $form->error($model,'price'); ?>
-	</div>
+		<?php if($model->isNewRecord) { ?>
+		<div class="form-group">
+			<?php echo $form->labelEx($producto_imagen,'image_url'); ?>
+			<?php echo $form->fileField($producto_imagen,'image_url'); ?>
+			<?php echo $form->error($producto_imagen,'image_url'); ?>
+		</div>
+		<?php } ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'size'); ?>
-		<?php echo $form->textField($model,'size',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'size'); ?>
-	</div>
+		<div class="form-group <?php if($form->error($model,'status')!=''){ echo 'has-error'; }?>">
+			<?php echo $form->labelEx($model,'status', array('class'=>'control-label')); ?>
+			<div class="input-group">
+				<?php echo $form->dropDownList($model,'status',array('1'=>'Activo', '0'=>'Inactivo'), array('class'=>'form-control input-medium')); ?>
+				<?php echo $form->error($model,'status', array('class'=>'help-block')); ?>
+			</div>
+		</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
-		<?php echo $form->error($model,'status'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
+		<br/>
+		<div class="buttons">
+			<?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Actualizar', array('class'=>'btn red-stripe uppercase')); ?>
+		</div>
+	</div><!-- form -->
 
 <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+
+	<div class="col-md-4">
+		<?php if(!$model->isNewRecord){ ?>
+			 <?php foreach ($model->images as $image) { ?>
+			 <div class="row" id="image_<?php echo $image->id;?>">
+				 <div class="col-md-12 center-container">
+				    <img class="col-md-12" src="<?php echo $image->image_url;?>" />
+				 </div>
+				 <div class="col-md-12 center-container">
+			    	<span class="button pink eliminarImagen" data-id="<?php echo $image->id;?>">Eliminar Imagen</span>
+			    </div>
+			    <hr class="col-md-12"/>
+			   </div>
+			  <?php } ?>
+		<?php } ?>
+	</div>
+</div>
+<script type="text/javascript">
+	$(".eliminarImagen").click(function(){
+		var id=$(this).data('id');
+		$.post(
+			"<?php echo Yii::app()->request->baseUrl;?>/products/deleteImage",
+			{
+				id:id
+			},
+			function(error){
+				if(error=="1")
+					alert("Ocurrió un error, inténtalo de nuevo");
+				else{
+					$("#image_"+id).hide(400);
+					$("#image_"+id).html("");
+				}
+			});
+		});
+</script>

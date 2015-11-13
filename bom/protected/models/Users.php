@@ -9,7 +9,6 @@
  * @property string $last_name
  * @property string $username
  * @property string $password
- * @property integer $id_profiles
  *
  * The followings are the available model relations:
  * @property Profiles $idProfiles
@@ -32,13 +31,12 @@ class Users extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, id_profiles', 'required'),
-			array('id_profiles', 'numerical', 'integerOnly'=>true),
+			array('username, password', 'required'),
 			array('name, last_name, username', 'length', 'max'=>45),
 			array('password', 'length', 'max'=>150),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, last_name, username, password, id_profiles', 'safe', 'on'=>'search'),
+			array('id, name, last_name, username, password', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,7 +48,6 @@ class Users extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idProfiles' => array(self::BELONGS_TO, 'Profiles', 'id_profiles'),
 		);
 	}
 
@@ -65,7 +62,6 @@ class Users extends CActiveRecord
 			'last_name' => 'Last Name',
 			'username' => 'Username',
 			'password' => 'Password',
-			'id_profiles' => 'Id Profiles',
 		);
 	}
 
@@ -92,7 +88,6 @@ class Users extends CActiveRecord
 		$criteria->compare('last_name',$this->last_name,true);
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('password',$this->password,true);
-		$criteria->compare('id_profiles',$this->id_profiles);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

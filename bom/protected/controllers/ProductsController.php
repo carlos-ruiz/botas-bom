@@ -64,19 +64,35 @@ class ProductsController extends Controller
 	public function actionCreate()
 	{
 		$model=new Products;
-
+		$producto_imagen= new ProductImages;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Products']))
 		{
+			$url = Yii::app()->basePath."/../images/catalogo/";
 			$model->attributes=$_POST['Products'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$producto_imagen->attributes=$_POST['ProductImages'];
+			$uploadedFile=CUploadedFile::getInstance($producto_imagen,'image_url');
+			$tempNameArray = explode('.',$uploadedFile->name);
+			$ext = ".".$tempNameArray[sizeof($tempNameArray)-1];
+
+            $fileName = time().$ext;
+            if($model->save())
+	        {
+				$uploadedFile->saveAs($url.$fileName);
+				$producto_imagen->image_url=Yii::app()->request->baseUrl."/images/catalogo/".$fileName;
+				$producto_imagen->products_id=$model->id;
+				if($producto_imagen->save()){
+	                $this->redirect(array('view','id'=>$model->id));
+		        }
+	        }
+
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+			'producto_imagen'=>$producto_imagen,
 		));
 	}
 
@@ -88,7 +104,7 @@ class ProductsController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$producto_imagen = new ProductImages;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -101,6 +117,7 @@ class ProductsController extends Controller
 
 		$this->render('update',array(
 			'model'=>$model,
+			'producto_imagen'=>$producto_imagen,
 		));
 	}
 

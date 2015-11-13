@@ -19,7 +19,7 @@ License: You must have a valid license purchased only from themeforest (the abov
 <!-- Head BEGIN -->
 <head>
   <meta charset="utf-8">
-  <title>Botas y Botines BOM</title>
+  <title><?= $this->pageTitle ?></title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -79,7 +79,7 @@ License: You must have a valid license purchased only from themeforest (the abov
         <!-- BEGIN NAVIGATION -->
         <div class="header-navigation">
           <ul>
-            <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/index" <?php if($this->section == "catalogo")echo "style='color:#E02222;'";?>>Catálogo</a></li>
+            <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/products/index" <?php if($this->section == "catalogo")echo "style='color:#E02222;'";?>>Catálogo</a></li>
             <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/aboutUs" <?php if($this->section == "aboutUs")echo "style='color:#E02222;'";?>>¿Quiénes somos?</a></li>
             <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/mision" <?php if($this->section == "mision")echo "style='color:#E02222;'";?>>Misión</a></li>
             <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/vision" <?php if($this->section == "vision")echo "style='color:#E02222;'";?>>Visión</a></li>
@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest (the abov
         <div class="row">
           <!-- BEGIN COPYRIGHT -->
           <div class="col-md-6 col-sm-6 padding-top-10">
-            2015 © Techinc. ALL Rights Reserved.
+            BOM 2015 © Techinc.
           </div>
           <!-- END COPYRIGHT -->
             <!-- BEGIN SOCIAL ICONS -->
