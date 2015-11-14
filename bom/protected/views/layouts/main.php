@@ -63,6 +63,9 @@ License: You must have a valid license purchased only from themeforest (the abov
   <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/layout/css/custom.css" rel="stylesheet">
   <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/custom.css" rel="stylesheet">
   <!-- Theme styles END -->
+
+  <!-- JAVASCRIPT FILES -->
+  <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
 </head>
 <!-- Head END -->
 
@@ -113,7 +116,8 @@ License: You must have a valid license purchased only from themeforest (the abov
     </div>
 
     <!-- BEGIN FOOTER -->
-    <div class="footer">
+    <!-- <div id="backing-footer"></div> -->
+    <div class="footer" id="footer">
       <div class="container">
         <div class="row">
           <!-- BEGIN COPYRIGHT -->
@@ -239,6 +243,11 @@ Nostrud duis molestie at dolore.</p>
             var backingHeader = document.getElementById("backing-header");
             var offsetHeight = document.getElementById("header").offsetHeight;
             backingHeader.setAttribute("style","height:"+offsetHeight+"px");
+
+            // var backingFooter = document.getElementById("backing-footer");
+            // var offsetHeightFooter = document.getElementById("footer").offsetHeight;
+            // backingFooter.setAttribute("style","height:"+offsetHeightFooter+"px");
+
         });
     </script>
     <!-- END PAGE LEVEL JAVASCRIPTS -->

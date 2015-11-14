@@ -612,3 +612,588 @@ Stack trace:
 REQUEST_URI=/botasbom/bom/products/update/favicon.ico
 HTTP_REFERER=http://localhost/botasbom/bom/products/update/1
 ---
+2015/11/14 11:26:48 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`botasbom`.`users`, CONSTRAINT `fk_users_profiles1` FOREIGN KEY (`id_profiles`) REFERENCES `profiles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). La sentencia SQL ejecutada fue: INSERT INTO `users` (`name`, `last_name`, `username`, `password`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\botasbom\bom\protected\controllers\SiteController.php (137)
+in C:\xampp\htdocs\botasbom\bom\index.php (13)
+2015/11/14 11:26:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`botasbom`.`users`, CONSTRAINT `fk_users_profiles1` FOREIGN KEY (`id_profiles`) REFERENCES `profiles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `users` (`name`, `last_name`, `username`, `password`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\botasbom\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\botasbom\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\botasbom\bom\protected\controllers\SiteController.php(137): CActiveRecord->save()
+#3 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(281): SiteController->init()
+#4 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#5 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/botasbom/bom/site/index
+---
+2015/11/14 11:30:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "bom/assets/global/plugins/slider-layer-slider/skins/fullwidth/skin.css"' in C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('bom/assets/glob...')
+#1 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/botasbom/bom/bom/assets/global/plugins/slider-layer-slider/skins/fullwidth/skin.css
+HTTP_REFERER=http://localhost/botasbom/bom/site/index
+---
+2015/11/14 11:30:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "bom/assets/global/plugins/slider-layer-slider/css/blank.gif"' in C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('bom/assets/glob...')
+#1 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/botasbom/bom/bom/assets/global/plugins/slider-layer-slider/css/blank.gif
+HTTP_REFERER=http://localhost/botasbom/bom/site/index
+---
+2015/11/14 11:31:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/index
+---
+2015/11/14 11:31:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('site/favicon.ic...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/site/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/site/login
+---
+2015/11/14 11:31:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('site/favicon.ic...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/site/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/site/login
+---
+2015/11/14 11:31:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/create
+---
+2015/11/14 11:34:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/create
+---
+2015/11/14 11:35:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/create
+---
+2015/11/14 11:38:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/create
+---
+2015/11/14 11:38:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/create
+---
+2015/11/14 11:38:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/create
+---
+2015/11/14 11:38:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('site/favicon.ic...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/site/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/site/aboutUs
+---
+2015/11/14 11:39:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('site/favicon.ic...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/site/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/site/vision
+---
+2015/11/14 11:39:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/index
+---
+2015/11/14 11:41:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/index
+---
+2015/11/14 11:42:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/index
+---
+2015/11/14 11:42:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:42:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:44:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:44:12 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:45:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:45:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:45:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:45:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:46:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:46:07 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:48:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:48:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:51:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:51:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:52:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:52:00 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:52:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:52:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:55:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:55:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:56:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:56:05 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:56:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "deleteImage" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('deleteImage')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('deleteImage')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/delete...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/deleteImage
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:56:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "deleteImage" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('deleteImage')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('deleteImage')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/delete...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/deleteImage
+---
+2015/11/14 11:57:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:57:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:58:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "assets" solicitada.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/assets...')
+#3 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/botasbom/bom/products/assets/frontend/layout/img/up.png
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---
+2015/11/14 11:58:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp\htdocs\botasbom\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\botasbom\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\botasbom\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\botasbom\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\botasbom\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\botasbom\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\botasbom\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\botasbom\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\botasbom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/update...')
+#10 C:\xampp\htdocs\botasbom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\botasbom\bom\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/botasbom/bom/products/update/favicon.ico
+HTTP_REFERER=http://localhost/botasbom/bom/products/update/11
+---

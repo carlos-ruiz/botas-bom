@@ -3,7 +3,6 @@
 /* @var $model Products */
 /* @var $form CActiveForm */
 ?>
-
 <div class="row">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'products-form',
@@ -80,8 +79,8 @@
 				 <div class="col-md-12 center-container">
 				    <img class="col-md-12" src="<?php echo $image->image_url;?>" />
 				 </div>
-				 <div class="col-md-12 center-container">
-			    	<span class="button pink eliminarImagen" data-id="<?php echo $image->id;?>">Eliminar Imagen</span>
+				 <div class="col-md-12 align-center">
+			    	<span class="btn red-haze btn-outline btn-circle btn-sm eliminarImagen" data-id="<?php echo $image->id;?>">Eliminar Imagen</span>
 			    </div>
 			    <hr class="col-md-12"/>
 			   </div>

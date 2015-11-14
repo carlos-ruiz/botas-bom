@@ -33,7 +33,7 @@ class ProductsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'deleteImage'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -186,6 +186,16 @@ class ProductsController extends Controller
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
+		}
+	}
+
+	public function actionDeleteImage()
+	{
+		if(isset($_POST['id'])){
+			if(ProductImages::model()->find("id=?",array($_POST['id']))->delete())
+				echo 0; //SI NO HAY ERROR REGRESAMOS 0
+			else
+				echo 1; //SI HAY ERROR REGRESAMOS 1
 		}
 	}
 }
