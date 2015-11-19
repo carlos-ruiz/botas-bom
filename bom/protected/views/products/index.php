@@ -1,20 +1,12 @@
 <?php
 /* @var $this ProductsController */
 /* @var $dataProvider CActiveDataProvider */
-
-$this->breadcrumbs=array(
-	'Products',
-);
-
-$this->menu=array(
-	array('label'=>'Create Products', 'url'=>array('create')),
-	array('label'=>'Manage Products', 'url'=>array('admin')),
-);
 ?>
+<div class="layout-content">
+	<h1>Products</h1>
 
-<h1>Products</h1>
-
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+	<?php $this->widget('zii.widgets.CListView', array(
+		'dataProvider'=>$dataProvider,
+		'itemView'=>'_view',
+	)); ?>
+</div>

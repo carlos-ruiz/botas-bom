@@ -47,3 +47,24 @@
 .text-right {
 	text-align: right;
 }
+
+.image-form {
+    display: none;
+    height: 150px;
+    width: 100%;
+    float: left;
+}
+
+#buttons a {
+	margin: 0 10px;
+}
+
+tr.odd {
+    background: rgba(224, 34, 34, 0.17) !important;
+}
+tr.even.selected{
+    background: #F8F8F8 !important;
+}
+tr.even:hover{
+    background: #F8F8F8 !important;
+}

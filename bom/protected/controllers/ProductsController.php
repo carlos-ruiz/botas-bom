@@ -52,8 +52,25 @@ class ProductsController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$producto_imagen = new ProductImages;
+
+		if(isset($_POST['ProductImages'])){
+			$url = Yii::app()->basePath."/../images/catalogo/";
+			$producto_imagen->attributes=$_POST['ProductImages'];
+			$uploadedFile=CUploadedFile::getInstance($producto_imagen,'image_url');
+			$tempNameArray = explode('.',$uploadedFile->name);
+			$ext = ".".$tempNameArray[sizeof($tempNameArray)-1];
+			$fileName = time().$ext;
+
+			if($uploadedFile->saveAs($url.$fileName)){
+				$producto_imagen->image_url=Yii::app()->request->baseUrl."/images/catalogo/".$fileName;
+				$producto_imagen->products_id=$id;
+				$producto_imagen->save();
+            }
+		}
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'producto_imagen'=>$producto_imagen
 		));
 	}
 

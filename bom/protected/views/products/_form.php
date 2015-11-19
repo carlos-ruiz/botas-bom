@@ -6,10 +6,6 @@
 <div class="row">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'products-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 	'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
@@ -47,13 +43,22 @@
 			</div>
 		</div>
 
-		<?php if($model->isNewRecord) { ?>
+
 		<div class="form-group">
 			<?php echo $form->labelEx($producto_imagen,'image_url'); ?>
-			<?php echo $form->fileField($producto_imagen,'image_url'); ?>
+			<?php
+			   $this->widget('CMultiFileUpload', array(
+			   'model' => $producto_imagen,
+			   //'name' => 'files',
+			   'attribute' => 'image_url',
+			   'accept' => 'jpeg|jpg|gif|png', // useful for verifying files
+			   'duplicate' => 'Archivo duplicado', // useful, i think
+			   'denied' => 'Tipo de archivo invalido', // useful, i think
+			   'max'=>3,
+			));
+			?>
 			<?php echo $form->error($producto_imagen,'image_url'); ?>
 		</div>
-		<?php } ?>
 
 		<div class="form-group <?php if($form->error($model,'status')!=''){ echo 'has-error'; }?>">
 			<?php echo $form->labelEx($model,'status', array('class'=>'control-label')); ?>

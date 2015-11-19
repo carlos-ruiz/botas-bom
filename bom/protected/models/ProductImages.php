@@ -31,7 +31,7 @@ class ProductImages extends CActiveRecord
 		return array(
 			array('image_url, products_id', 'required'),
 			array('products_id', 'numerical', 'integerOnly'=>true),
-			array('image_url', 'length', 'max'=>400),
+			array('image_url', 'file', 'types'=>'jpg,jpeg,png,gif'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, image_url, products_id', 'safe', 'on'=>'search'),

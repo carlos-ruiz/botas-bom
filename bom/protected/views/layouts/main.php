@@ -66,6 +66,8 @@ License: You must have a valid license purchased only from themeforest (the abov
 
   <!-- JAVASCRIPT FILES -->
   <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+  <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/jquery.multifile.js" type="text/javascript"></script>
 </head>
 <!-- Head END -->
 
@@ -111,7 +113,7 @@ License: You must have a valid license purchased only from themeforest (the abov
     <div id="backing-header"></div>
     <!-- Header END -->
 
-    <div class="layout-content">
+    <div>
       <?php echo $content; ?>
     </div>
 
@@ -211,8 +213,6 @@ Nostrud duis molestie at dolore.</p>
     <!--[if lt IE 9]>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/respond.min.js"></script>
     <![endif]-->
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/layout/scripts/back-to-top.js" type="text/javascript"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
