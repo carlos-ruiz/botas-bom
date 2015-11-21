@@ -68,3 +68,22 @@ tr.even.selected{
 tr.even:hover{
     background: #F8F8F8 !important;
 }
+
+.margin-top {
+	margin-top: 2em;
+}
+
+.flex-container {
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+.flex-item {
+	flex: 1;
+	min-width: 23%;
+}
+
+.white-color {
+	background-color: white;
+	margin: 10px;
+}

@@ -31,7 +31,15 @@ class SiteController extends Controller
 		$this->section = "index";
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$newProducts = Products::model()->findAll(array('order'=>'id DESC', 'limit' => 5));
+		$products = Products::model()->findAll();
+		$categories = Categories::model()->findAll(array('order'=>'name ASC'));
+
+		$this->render('index', array(
+			'newProducts'=>$newProducts,
+			'products'=>$products,
+			'categories'=>$categories
+			));
 	}
 
 	/**

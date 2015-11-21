@@ -16,7 +16,6 @@ class ProductsController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -33,12 +32,8 @@ class ProductsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update', 'deleteImage'),
+				'actions'=>array('create', 'update', 'deleteImage', 'admin', 'delete'),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -84,25 +79,34 @@ class ProductsController extends Controller
 		$producto_imagen= new ProductImages;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+		$folderImagesPath = Yii::getPathOfAlias('webroot').'/images/catalogo/';
+		if(!is_dir($folderImagesPath)) {
+			mkdir($folderImagesPath);
+			chmod($folderImagesPath, 0755);
+		}
 
 		if(isset($_POST['Products']))
 		{
 			$url = Yii::app()->basePath."/../images/catalogo/";
-			$model->attributes=$_POST['Products'];
-			$producto_imagen->attributes=$_POST['ProductImages'];
-			$uploadedFile=CUploadedFile::getInstance($producto_imagen,'image_url');
-			$tempNameArray = explode('.',$uploadedFile->name);
-			$ext = ".".$tempNameArray[sizeof($tempNameArray)-1];
-
-            $fileName = time().$ext;
+			$model->attributes = $_POST['Products'];
             if($model->save())
 	        {
-				$uploadedFile->saveAs($url.$fileName);
-				$producto_imagen->image_url=Yii::app()->request->baseUrl."/images/catalogo/".$fileName;
-				$producto_imagen->products_id=$model->id;
-				if($producto_imagen->save()){
-	                $this->redirect(array('view','id'=>$model->id));
-		        }
+				$images = CUploadedFile::getInstances($producto_imagen,'image_url');
+				foreach ($images as $image) {
+					$uploadedFile = $image;
+					$tempNameArray = explode('.',$uploadedFile->name);
+					$ext = ".".$tempNameArray[sizeof($tempNameArray)-1];
+		            $fileName = time().rand(1, 999).$ext;
+					$uploadedFile->saveAs($url.$fileName);
+					
+					$producto_imagen = new ProductImages;
+					$producto_imagen->products_id = $model->id;
+					$producto_imagen->image_url = Yii::app()->request->baseUrl."/images/catalogo/".$fileName;
+					if($producto_imagen->validate()){
+						$producto_imagen->save();
+					}
+				}
+	            $this->redirect(array('view','id'=>$model->id));
 	        }
 
 		}
@@ -127,9 +131,26 @@ class ProductsController extends Controller
 
 		if(isset($_POST['Products']))
 		{
+			$url = Yii::app()->basePath."/../images/catalogo/";
 			$model->attributes=$_POST['Products'];
-			if($model->save())
+			if($model->save()){
+				$images = CUploadedFile::getInstances($producto_imagen,'image_url');
+				foreach ($images as $image) {
+					$uploadedFile = $image;
+					$tempNameArray = explode('.',$uploadedFile->name);
+					$ext = ".".$tempNameArray[sizeof($tempNameArray)-1];
+		            $fileName = time().rand(1, 999).$ext;
+					$uploadedFile->saveAs($url.$fileName);
+					
+					$producto_imagen = new ProductImages;
+					$producto_imagen->products_id = $model->id;
+					$producto_imagen->image_url = Yii::app()->request->baseUrl."/images/catalogo/".$fileName;
+					if($producto_imagen->validate()){
+						$producto_imagen->save();
+					}
+				}
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		$this->render('update',array(
@@ -145,7 +166,16 @@ class ProductsController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$product = $this->loadModel($id);
+		$baseUrl = Yii::app()->request->baseUrl;
+		foreach ($product->images as $image) {
+			$filePath = str_replace($baseUrl.'/images', 'images', $image->image_url);
+			if (file_exists($filePath)) {
+				unlink($filePath);
+			}
+			$image->delete();
+		}
+		$product->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -209,8 +239,15 @@ class ProductsController extends Controller
 	public function actionDeleteImage()
 	{
 		if(isset($_POST['id'])){
-			if(ProductImages::model()->find("id=?",array($_POST['id']))->delete())
+			$image = ProductImages::model()->find("id=?",array($_POST['id']));
+			$baseUrl = Yii::app()->request->baseUrl;
+			$filePath = str_replace($baseUrl.'/images', 'images', $image->image_url);
+			if (file_exists($filePath)) {
+				unlink($filePath);
+			}
+			if($image->delete()){
 				echo 0; //SI NO HAY ERROR REGRESAMOS 0
+			}
 			else
 				echo 1; //SI HAY ERROR REGRESAMOS 1
 		}
