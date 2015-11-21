@@ -4,31 +4,30 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
+<div class="row">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'categories-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
-)); ?>
+	<?php $form=$this->beginWidget('CActiveForm', array(
+		'id'=>'categories-form',
+		// Please note: When you enable ajax validation, make sure the corresponding
+		// controller action is handling ajax validation correctly.
+		// There is a call to performAjaxValidation() commented in generated controller code.
+		// See class documentation of CActiveForm for details on this.
+		'enableAjaxValidation'=>false,
+	)); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<div class="form-body col-md-7">
 
-	<?php echo $form->errorSummary($model); ?>
+		<div class="form-group <?php if($form->error($model,'name')!=''){ echo 'has-error'; }?>">
+			<?php echo $form->labelEx($model,'name', array('class'=>'control-label')); ?>
+			<div class="input-group">
+				<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>65, 'class'=>'form-control')); ?>
+				<?php echo $form->error($model,'name', array('class'=>'help-block')); ?>
+			</div>
+		</div>
+		<div class="buttons">
+				<?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Actualizar', array('class'=>'btn red-stripe uppercase')); ?>
+		</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'name'); ?>
 	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>
-
-</div><!-- form -->
+	<?php $this->endWidget(); ?>
+</div>

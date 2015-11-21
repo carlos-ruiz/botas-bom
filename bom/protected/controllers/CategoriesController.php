@@ -118,6 +118,7 @@ class CategoriesController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
+
 	/**
 	 * Lists all models.
 	 */
