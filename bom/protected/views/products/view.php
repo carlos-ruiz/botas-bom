@@ -25,9 +25,10 @@
   <hr/>
   <?php if(!Yii::app()->user->isGuest){ ?>
   <div id="buttons" class="row clearfix">
-    <div class="col-md-6 col-md-offset-6 text-right">
+    <div class="col-md-8 col-md-offset-4 text-right">
       <a href="<?= Yii::app()->request->baseUrl; ?>/products/update/<?= $model->id; ?>" class="btn red-haze btn-outline btn-circle btn-sm">Editar producto</a>
       <a href="<?= Yii::app()->request->baseUrl; ?>/products/delete/<?= $model->id; ?>" class="btn red-haze btn-outline btn-circle btn-sm">Eliminar producto</a>
+      <a href="<?= Yii::app()->request->baseUrl; ?>/products/create" class="btn red-haze btn-outline btn-circle btn-sm">Agregar producto</a>
       <a href="<?= Yii::app()->request->baseUrl; ?>/products/admin" class="btn red-haze btn-outline btn-circle btn-sm">Ir al admin</a>
     </div>
   </div>

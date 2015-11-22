@@ -87,3 +87,7 @@ tr.even:hover{
 	background-color: white;
 	margin: 10px;
 }
+
+.select2-input {
+	min-width: 200px;
+}

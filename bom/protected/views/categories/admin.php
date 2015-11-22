@@ -10,6 +10,7 @@
 	</div>
 	<div class="text-right">
 		<?php echo CHtml::link('Agregar categoría', array('categories/create'), array('class'=>'btn red-haze btn-outline btn-circle btn-sm')); ?>
+		<?php echo CHtml::link('Administrar productos', array('products/admin'), array('class'=>'btn red-haze btn-outline btn-circle btn-sm')); ?>
 	</div>
 		<?php $this->widget('zii.widgets.grid.CGridView', array(
 			'id'=>'categories-grid',

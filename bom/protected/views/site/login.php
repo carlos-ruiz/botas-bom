@@ -34,7 +34,7 @@ $this->pageTitle=Yii::app()->name . ' - Login';
 		<div class="form-group align-center <?php if($form->error($model,'password')!=''){ echo 'has-error'; }?>">
 			<?php echo $form->labelEx($model,'password', array('class'=>'control-label')); ?>
 			<div class="input-group margin-auto">
-				<?php echo $form->textField($model,'password',array('size'=>60,'maxlength'=>65, 'class'=>'form-control')); ?>
+				<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>65, 'class'=>'form-control')); ?>
 				<?php echo $form->error($model,'password', array('class'=>'help-block')); ?>
 			</div>
 		</div>
