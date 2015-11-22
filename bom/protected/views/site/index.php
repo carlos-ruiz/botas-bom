@@ -19,7 +19,7 @@
     			scalein: .5;
     			scaleout: .5;
     			showuntil: 4000;
-    			">Tones of <strong>shop UI features</strong> designed</div>
+    			">Nuestras <strong>Botas y Botines</strong></div>
 
     			<div class="ls-l ls-mini-text" style="top: 338px; left: 35%; white-space: nowrap;" data-ls="
     			fade: true;
@@ -28,7 +28,7 @@
     			easingin: easeOutQuint;
     			delayin: 300;
     			showuntil: 4000;
-    			">Lorem ipsum dolor sit amet  constectetuer diam<br > adipiscing elit euismod ut laoreet dolore.
+    			">Son de alta calidad diseñados para la comodidad </br> de nuestros <strong>clientes</strong>
     		</div>
     	</div>
     	<!-- slide one end -->
