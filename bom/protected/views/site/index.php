@@ -179,9 +179,9 @@ showuntil: 4000;">
 			<!-- BEGIN CONTENT -->
 			<div class="col-md-9 col-sm-8">
 				<h2>Más nuevos</h2>
-				<div class="owl-carousel owl-carousel3">
+				<div class="owl-carousel owl-carousel3 flex-container recent-products-container">
 					<?php foreach ($newProducts as $product) { ?>
-						<div>
+						<div class="flex-item  white-color border-background">
 							<div class="product-item">
 								<div class="pi-img-wrapper">
 									<img src="<?= $product->images[0]->image_url;?>" class="img-responsive" alt="<?= $product->name; ?>">
@@ -203,11 +203,11 @@ showuntil: 4000;">
 		<!-- END SIDEBAR & CONTENT -->
 
 		<!-- BEGIN LIST OF PRODUCTS -->
-		<div class="col-md-12">
+		<div class="col-md-12 all-products-container">
 			<h2>Productos</h2>
 			<div class="flex-container">
 				<?php foreach ($products as $product) { ?>
-					<div class="col-md-3 flex-item white-color">
+					<div class="col-md-3 flex-item white-color margin">
 						<div class="product-item">
 							<div class="pi-img-wrapper">
 								<img src="<?= $product->images[0]->image_url;?>" class="img-responsive" alt="<?= $product->name; ?>">
@@ -331,3 +331,11 @@ showuntil: 4000;">
 	</div>
 </div>
 <!-- END PRE-FOOTER -->
+
+<script type="text/javascript">
+	$(window).load(function (){
+		var heightItems = $(".recent-products-container").height();
+		$(".recent-products-container .flex-item").css({'height':heightItems, 'margin':'0 5px', 'display': 'table-cell', 'vertical-align': 'bottom'});
+	});
+</script>
+
