@@ -106,6 +106,13 @@ class ProductsController extends Controller
 						$producto_imagen->save();
 					}
 				}
+				$categories = $_POST['Products']['categoriesSelected'];
+				foreach ($categories as $category) {
+					$productCategory = new ProductsHasCategories;
+					$productCategory->id_products = $model->id;
+					$productCategory->id_categories = $category;
+					$productCategory->save();
+				}
 	            $this->redirect(array('view','id'=>$model->id));
 	        }
 
@@ -125,6 +132,16 @@ class ProductsController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		$categories = ProductsHasCategories::model()->findAll('id_products=?',array($model->id));
+
+		if(!isset($_POST['Products'])){
+			$categoriesIds = array();
+			foreach ($categories as $category) {
+				array_push($categoriesIds, $category->id_categories);
+			}
+			$model->categoriesSelected = $categoriesIds;
+		}
+
 		$producto_imagen = new ProductImages;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -149,6 +166,19 @@ class ProductsController extends Controller
 						$producto_imagen->save();
 					}
 				}
+
+				foreach ($categories as $category) {
+					$category->delete();
+				}
+
+				$categoriesSelected = $_POST['Products']['categoriesSelected'];
+				foreach ($categoriesSelected as $category) {
+					$productCategory = new ProductsHasCategories;
+					$productCategory->id_products = $model->id;
+					$productCategory->id_categories = $category;
+					$productCategory->save();
+				}
+
 				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
@@ -187,7 +217,7 @@ class ProductsController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Products');
+		$dataProvider = new CActiveDataProvider('Products');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

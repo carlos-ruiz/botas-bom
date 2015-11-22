@@ -17,6 +17,7 @@
  */
 class Products extends CActiveRecord
 {
+	public $categoriesSelected;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -70,6 +71,7 @@ class Products extends CActiveRecord
 			'price' => 'Precio',
 			'size' => 'Talla',
 			'status' => 'Estatus',
+			'categoriesSelected'=>'Seleccione las categorías del producto',
 		);
 	}
 

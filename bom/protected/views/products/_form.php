@@ -43,6 +43,12 @@
 			</div>
 		</div>
 
+		<div class="form-group">
+			<?php echo $form->labelEx($model,'categoriesSelected', array('class'=>'control-label')); ?>
+			<div class="input-group">
+				<?php echo $form->dropDownList($model,'categoriesSelected',Categories::model()->selectListMultiple(), array("class" => "form-control select2","multiple"=>"multiple")); ?>
+			</div>
+		</div>
 
 		<div class="form-group">
 			<?php echo $form->labelEx($producto_imagen,'image_url'); ?>

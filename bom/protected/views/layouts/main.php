@@ -51,6 +51,14 @@ License: You must have a valid license purchased only from themeforest (the abov
   <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
   <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/carousel-owl-carousel/owl-carousel/owl.carousel.css" rel="stylesheet">
   <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/slider-layer-slider/css/layerslider.css" rel="stylesheet">
+  <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css" />
+  <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+  <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+  <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+  <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+  <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/select2/select2.css" rel="stylesheet" type="text/css"/>
+  <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+
   <!-- Page level plugin styles END -->
 
   <!-- Theme styles START -->
@@ -88,6 +96,9 @@ License: You must have a valid license purchased only from themeforest (the abov
             <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/aboutUs" <?php if($this->section == "aboutUs")echo "style='color:#E02222;'";?>>¿Quiénes somos?</a></li>
             <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/mision" <?php if($this->section == "mision")echo "style='color:#E02222;'";?>>Misión</a></li>
             <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/vision" <?php if($this->section == "vision")echo "style='color:#E02222;'";?>>Visión</a></li>
+            <?php if(!Yii::app()->user->isGuest){ ?>
+              <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout" <?php if($this->section == "logout")echo "style='color:#E02222;'";?>>Salir</a></li>
+            <?php } ?>
 
             <!-- BEGIN TOP SEARCH -->
             <li class="menu-search">
@@ -223,7 +234,7 @@ Nostrud duis molestie at dolore.</p>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/carousel-owl-carousel/owl-carousel/owl.carousel.min.js" type="text/javascript"></script><!-- slider for products -->
     <script src='<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/zoom/jquery.zoom.min.js' type="text/javascript"></script><!-- product zoom -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script><!-- Quantity -->
-
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/select2/select2.min.js" type="text/javascript"></script>
     <!-- BEGIN LayerSlider -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/slider-layer-slider/js/greensock.js" type="text/javascript"></script><!-- External libraries: GreenSock -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/slider-layer-slider/js/layerslider.transitions.js" type="text/javascript"></script><!-- LayerSlider script files -->
@@ -240,6 +251,10 @@ Nostrud duis molestie at dolore.</p>
             Layout.initImageZoom();
             Layout.initTouchspin();
             Layout.initTwitter();
+            $('.select2').select2({
+              placeholder: "--Seleccione--",
+              allowClear: true
+            });
             var backingHeader = document.getElementById("backing-header");
             var offsetHeight = document.getElementById("header").offsetHeight;
             backingHeader.setAttribute("style","height:"+offsetHeight+"px");

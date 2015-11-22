@@ -95,4 +95,13 @@ class Categories extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function selectListMultiple(){
+		$categories = $this->model()->findAll();
+		$data = array();
+		foreach ($categories as $category) {
+			$data[$category->id]=$category->name;
+		}
+		return $data;
+	}
 }
