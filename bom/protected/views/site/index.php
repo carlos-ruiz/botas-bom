@@ -228,7 +228,7 @@ showuntil: 4000;">
 	</div>
 </div>
 
-<!-- BEGIN BRANDS -->
+<!-- BEGIN BRANDS
 <div class="brands">
 	<div class="container">
 		<div class="owl-carousel owl-carousel6-brands">
@@ -247,9 +247,9 @@ showuntil: 4000;">
 		</div>
 	</div>
 </div>
-<!-- END BRANDS -->
+END BRANDS -->
 
-<!-- BEGIN STEPS -->
+<!-- BEGIN STEPS
 <div class="steps-block steps-block-red">
 	<div class="container">
 		<div class="row">
@@ -279,7 +279,7 @@ showuntil: 4000;">
 		</div>
 	</div>
 </div>
-<!-- END STEPS -->
+END STEPS -->
 
 <!-- BEGIN PRE-FOOTER -->
 <div class="pre-footer">
@@ -287,7 +287,7 @@ showuntil: 4000;">
 		<div class="row">
 			<!-- BEGIN BOTTOM ABOUT BLOCK -->
 			<div class="col-md-3 col-sm-6 pre-footer-col">
-				<h2>About us</h2>
+				<h2>¿Quienes somos?</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sit nonummy nibh euismod tincidunt ut laoreet dolore magna aliquarm erat sit volutpat. Nostrud exerci tation ullamcorper suscipit lobortis nisl aliquip  commodo consequat. </p>
 				<p>Duis autem vel eum iriure dolor vulputate velit esse molestie at dolore.</p>
 			</div>
@@ -295,6 +295,7 @@ showuntil: 4000;">
 			<!-- BEGIN BOTTOM INFO BLOCK -->
 			<div class="col-md-3 col-sm-6 pre-footer-col">
 				<h2>Information</h2>
+			<!--
 				<ul class="list-unstyled">
 					<li><i class="fa fa-angle-right"></i> <a href="#">Delivery Information</a></li>
 					<li><i class="fa fa-angle-right"></i> <a href="#">Customer Service</a></li>
@@ -304,26 +305,27 @@ showuntil: 4000;">
 					<li><i class="fa fa-angle-right"></i> <a href="#">Careers</a></li>
 					<li><i class="fa fa-angle-right"></i> <a href="#">Payment Methods</a></li>
 				</ul>
+				-->
 			</div>
 			<!-- END INFO BLOCK -->
 
 			<!-- BEGIN TWITTER BLOCK -->
 			<div class="col-md-3 col-sm-6 pre-footer-col">
-				<h2 class="margin-bottom-0">Latest Tweets</h2>
+				<h2 class="margin-bottom-0">Últimos Tweets</h2>
 				<a class="twitter-timeline" href="https://twitter.com/twitterapi" data-tweet-limit="2" data-theme="dark" data-link-color="#57C8EB" data-widget-id="455411516829736961" data-chrome="noheader nofooter noscrollbar noborders transparent">Loading tweets by @keenthemes...</a>
 			</div>
 			<!-- END TWITTER BLOCK -->
 
 			<!-- BEGIN BOTTOM CONTACTS -->
 			<div class="col-md-3 col-sm-6 pre-footer-col">
-				<h2>Our Contacts</h2>
+				<h2>Contacto</h2>
 				<address class="margin-bottom-40">
-					35, Lorem Lis Street, Park Ave<br>
-					California, US<br>
-					Phone: 300 323 3456<br>
+					Ana María Gallaga 123<br>
+					Huaniqueo de Morales, Mich. MX<br>
+					Teléfono: 300 323 3456<br>
 					Fax: 300 323 1456<br>
-					Email: <a href="mailto:info@metronic.com">info@metronic.com</a><br>
-					Skype: <a href="skype:metronic">metronic</a>
+					Email: <a href="mailto:info@botasbom.com">info@botasbom.com</a><br>
+					Skype: <a href="skype:metronic">botasbom</a>
 				</address>
 			</div>
 			<!-- END BOTTOM CONTACTS -->
