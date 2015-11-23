@@ -4,7 +4,7 @@
     	<div id="layerslider" style="width: 100%; height: 494px; margin: 0 auto;">
 
     		<!-- slide-->
-    		<div class="ls-slide ls-slide1" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;">
+    		<div class="ls-slide ls-slide1" data-ls="offsetxin: right; slidedelay: 5000; transition2d: 24,25,27,28;">
 
     			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg.png"  heigh="495px" class="ls-bg" alt="Botas Bom">
 
@@ -34,7 +34,7 @@
     	<!-- slide one end -->
 
     	<!-- slide two start -->
-    	<div class="ls-slide ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 110,111,112,113;">
+    	<div class="ls-slide ls-slide2" data-ls="offsetxin: right; slidedelay: 5000; transition2d: 110,111,112,113;">
 
     		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg2.jpg" class="ls-bg" alt="Botas Bom">
 
@@ -84,7 +84,7 @@
 <!-- slide two end -->
 
 <!-- slide three start -->
-<div class="ls-slide ls-slide3" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 92,93,105;">
+<div class="ls-slide ls-slide3" data-ls="offsetxin: right; slidedelay: 5000; transition2d: 92,93,105;">
 
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg3.jpg" class="ls-bg" alt="Botas Bom">
 
@@ -99,7 +99,7 @@
 	scalein: .5;
 	scaleout: .5;
 	showuntil: 4000;
-	">Nuestros productos: <strong>Botas, Botínes y Tennis</strong> 
+	">Nuestros productos: <strong>Botas, Botínes y Tennis</strong>
 </div>
 <div class="ls-l" style="top: 333px; left: 33%; white-space: nowrap; font-size: 20px; font: 20px 'Open Sans Light', sans-serif;" data-ls="
 fade: true;
@@ -123,7 +123,7 @@ showuntil: 4000;
 <!-- slide three end -->
 
 <!-- slide four start -->
-<div class="ls-slide ls-slide4" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 110,111,112,113;">
+<div class="ls-slide ls-slide4" data-ls="offsetxin: right; slidedelay: 5000; transition2d: 110,111,112,113;">
 
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg4.jpg" class="ls-bg" alt="Botas Bom">
 
@@ -171,7 +171,7 @@ showuntil: 4000;">
 				<h2>Categorías</h2>
 				<ul class="list-group margin-bottom-25 sidebar-menu">
 					<?php foreach ($categories as $category) { ?>
-						<li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> <?= $category->name?></a></li>
+						<li class="list-group-item clearfix"><a href="#"><i class="fa fa-angle-right"></i> <?= $category->name?></a></li>
 					<?php } ?>
 				</ul>
 			</div>
