@@ -28,6 +28,7 @@
 .layout-content {
 	width: 90%;
 	margin: 0 auto;
+	display: block;
 }
 
 .layout-content h1{
@@ -74,20 +75,45 @@ tr.even:hover{
 }
 
 .flex-container {
-	display: inline-flex;
+	display: flex;
 	flex-wrap: wrap;
 }
 
 .flex-item {
 	flex: 1;
-	min-width: 23%;
+	min-width: 200px;
+	display: flex;
+    align-items: flex-end;
 }
 
 .white-color {
 	background-color: white;
-	margin: 10px;
 }
 
 .select2-input {
 	min-width: 200px;
+}
+
+.border-background {
+    border: solid 5px #F9F9F9;
+}
+
+.all-products-container {
+	padding: 0 !important;
+}
+
+.all-products-container .flex-container {
+	margin-left: -10px;
+}
+
+.all-products-container .flex-item {
+	width: 24%;
+}
+
+.margin {
+	margin: 10px;
+}
+
+.product-images img{
+	max-width: 300px;
 }

@@ -115,4 +115,14 @@ class Products extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function getCategoriesAsString(){
+		$categories = $this->categories;
+		$data = '';
+		foreach ($categories as $category) {
+			$data .= $category->category->name.', ';
+		}
+		$data = substr($data, 0, -2);
+		return $data;
+	}
 }

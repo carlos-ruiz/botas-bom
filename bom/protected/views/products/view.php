@@ -15,9 +15,14 @@
 			'price',
 			'size',
 			'status',
+			array(
+	            'label'=>'Categorías',
+	            'type'=>'raw',
+	            'value'=>$model->getCategoriesAsString(),
+	        ),
 		),
 	)); ?>
-<div class="row">
+<div class="row product-images">
 	<?php foreach ($model->images as $image) { ?>
     <img class="col-md-4" src="<?php echo $image->image_url;?>" />
   <?php } ?>

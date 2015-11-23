@@ -7,7 +7,7 @@ class ProductsController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	//public $layout='//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -106,12 +106,14 @@ class ProductsController extends Controller
 						$producto_imagen->save();
 					}
 				}
-				$categories = $_POST['Products']['categoriesSelected'];
-				foreach ($categories as $category) {
-					$productCategory = new ProductsHasCategories;
-					$productCategory->id_products = $model->id;
-					$productCategory->id_categories = $category;
-					$productCategory->save();
+				if(isset($_POST['Products']['categoriesSelected'])){
+					$categories = $_POST['Products']['categoriesSelected'];
+					foreach ($categories as $category) {
+						$productCategory = new ProductsHasCategories;
+						$productCategory->id_products = $model->id;
+						$productCategory->id_categories = $category;
+						$productCategory->save();
+					}
 				}
 	            $this->redirect(array('view','id'=>$model->id));
 	        }
@@ -171,12 +173,14 @@ class ProductsController extends Controller
 					$category->delete();
 				}
 
-				$categoriesSelected = $_POST['Products']['categoriesSelected'];
-				foreach ($categoriesSelected as $category) {
-					$productCategory = new ProductsHasCategories;
-					$productCategory->id_products = $model->id;
-					$productCategory->id_categories = $category;
-					$productCategory->save();
+				if(isset($_POST['Products']['categoriesSelected'])){
+					$categoriesSelected = $_POST['Products']['categoriesSelected'];
+					foreach ($categoriesSelected as $category) {
+						$productCategory = new ProductsHasCategories;
+						$productCategory->id_products = $model->id;
+						$productCategory->id_categories = $category;
+						$productCategory->save();
+					}
 				}
 
 				$this->redirect(array('view','id'=>$model->id));
@@ -217,9 +221,10 @@ class ProductsController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider = new CActiveDataProvider('Products');
+		$this->section = "catalogo";
+		$products = Products::model()->findAll();
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'products'=>$products,
 		));
 	}
 
