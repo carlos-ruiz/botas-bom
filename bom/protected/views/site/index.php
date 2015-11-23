@@ -3,10 +3,10 @@
     	<!-- LayerSlider start -->
     	<div id="layerslider" style="width: 100%; height: 494px; margin: 0 auto;">
 
-    		<!-- slide one start -->
+    		<!-- slide-->
     		<div class="ls-slide ls-slide1" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;">
 
-    			<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/layerslider/slide1/bg.jpg" class="ls-bg" alt="Slide background">
+    			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg.png"  heigh="495px" class="ls-bg" alt="Botas Bom">
 
     			<div class="ls-l ls-title" style="top: 96px; left: 35%; white-space: nowrap;" data-ls="
     			fade: true;
@@ -21,14 +21,14 @@
     			showuntil: 4000;
     			">Nuestras <strong>Botas y Botines</strong></div>
 
-    			<div class="ls-l ls-mini-text" style="top: 338px; left: 35%; white-space: nowrap;" data-ls="
+    			<div class="ls-l ls-mini-text" style="top: 300px; left: 33%; white-space: nowrap;" data-ls="
     			fade: true;
     			fadeout: true;
     			durationout: 750;
     			easingin: easeOutQuint;
     			delayin: 300;
     			showuntil: 4000;
-    			">Son de alta calidad diseñados para la comodidad </br> de nuestros <strong>clientes</strong>
+    			">¡Son de alta calidad! diseñados para la comodidad </br> de nuestros <strong>clientes</strong>
     		</div>
     	</div>
     	<!-- slide one end -->
@@ -36,7 +36,7 @@
     	<!-- slide two start -->
     	<div class="ls-slide ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 110,111,112,113;">
 
-    		<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/layerslider/slide2/bg.jpg" class="ls-bg" alt="Slide background">
+    		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg2.jpg" class="ls-bg" alt="Botas Bom">
 
     		<div class="ls-l ls-title" style="top: 40%; left: 21%; white-space: nowrap;" data-ls="
     		fade: true;
@@ -51,7 +51,7 @@
     		scalein: .5;
     		scaleout: .5;
     		showuntil: 4000;
-    		"><strong>Unlimted</strong> Layout Options <em>Fully Responsive</em>
+    		"><strong>Conoce</strong> todos nuestros <em>Modelos</em>
     	</div>
 
     	<div class="ls-l ls-price" style="top: 50%; left: 45%; white-space: nowrap;" data-ls="
@@ -62,10 +62,10 @@
     	delayin: 300;
     	scalein: .8;
     	scaleout: .8;
-    	showuntil: 4000;"><b>from</b> <strong><span>$</span>25</strong>
+    	showuntil: 4000;"><b>Desde</b> <strong><span>$</span>450</strong>
     </div>
 
-    <a href="#" class="ls-l ls-more" style="top: 72%; left: 21%; display: inline-block; white-space: nowrap;" data-ls="
+    <a href="<?php echo Yii::app()->request->baseUrl; ?>/products/index" class="ls-l ls-more" style="top: 72%; left: 21%; display: inline-block; white-space: nowrap;" data-ls="
     fade: true;
     fadeout: true;
     durationin: 750;
@@ -78,7 +78,7 @@
     rotateout: -90;
     scalein: .5;
     scaleout: .5;
-    showuntil: 4000;">See More Details
+    showuntil: 4000;">Ver Catálogo
 </a>
 </div>
 <!-- slide two end -->
@@ -86,7 +86,7 @@
 <!-- slide three start -->
 <div class="ls-slide ls-slide3" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 92,93,105;">
 
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/layerslider/slide3/bg.jpg" class="ls-bg" alt="Slide background">
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg3.jpg" class="ls-bg" alt="Botas Bom">
 
 	<div class="ls-l ls-title" style="top: 83px; left: 33%; white-space: nowrap;" data-ls="
 	fade: true;
@@ -99,7 +99,7 @@
 	scalein: .5;
 	scaleout: .5;
 	showuntil: 4000;
-	">Full Admin &amp; Frontend <strong>eCommerce UI</strong> Is Ready For Your Project
+	">Nuestros productos: <strong>Botas, Botínes y Tennis</strong> 
 </div>
 <div class="ls-l" style="top: 333px; left: 33%; white-space: nowrap; font-size: 20px; font: 20px 'Open Sans Light', sans-serif;" data-ls="
 fade: true;
@@ -111,13 +111,13 @@ scalein: .8;
 scaleout: .8;
 showuntil: 4000;
 ">
-<a href="#" class="ls-buy">
-	Buy It Now!
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/products/index" class="ls-buy">
+	Ver modelos
 </a>
-<div class="ls-price">
-	<span>All these for only:</span>
-	<strong>25<sup>$</sup></strong>
-</div>
+<!--div class="ls-price">
+	<span>Desde</span>
+	$</sup><strong>450.00<sup></strong>
+</div-->
 </div>
 </div>
 <!-- slide three end -->
@@ -125,7 +125,7 @@ showuntil: 4000;
 <!-- slide four start -->
 <div class="ls-slide ls-slide4" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 110,111,112,113;">
 
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/layerslider/slide5/bg.jpg" class="ls-bg" alt="Slide background">
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg4.jpg" class="ls-bg" alt="Botas Bom">
 
 	<div class="ls-l ls-title" style="top: 35%; left: 60%; white-space: nowrap;" data-ls="
 	fade: true;
@@ -138,8 +138,8 @@ showuntil: 4000;
 	scalein: .5;
 	scaleout: .5;
 	showuntil: 4000;">
-	The most<br>
-	wanted bijouterie
+	Lo más<br>
+	pedido
 </div>
 
 <div class="ls-l ls-mini-text" style="top: 70%; left: 60%; white-space: nowrap;" data-ls="
@@ -151,8 +151,8 @@ delayin: 300;
 scalein: .8;
 scaleout: .8;
 showuntil: 4000;">
-<span>Lorem ipsum and</span>
-<a href="#">Buy It Now!</a>
+<span>Categorías</span>
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/products/index">Ver Catálogo</a>
 </div>
 
 </div>
