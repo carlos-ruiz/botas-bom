@@ -18,9 +18,7 @@
 		'columns'=>array(
 			'name',
 			'description',
-			'price',
 			'size',
-			'status',
 			array(
 				'class'=>'CButtonColumn',
 			),

@@ -26,7 +26,7 @@
 				<?php echo $form->error($model,'description', array('class'=>'help-block')); ?>
 			</div>
 		</div>
-
+<!--
 		<div class="form-group <?php if($form->error($model,'price')!=''){ echo 'has-error'; }?>">
 			<?php echo $form->labelEx($model,'price', array('class'=>'control-label')); ?>
 			<div class="input-group">
@@ -34,7 +34,7 @@
 				<?php echo $form->error($model,'price', array('class'=>'help-block')); ?>
 			</div>
 		</div>
-
+-->
 		<div class="form-group <?php if($form->error($model,'size')!=''){ echo 'has-error'; }?>">
 			<?php echo $form->labelEx($model,'size', array('class'=>'control-label')); ?>
 			<div class="input-group">
@@ -65,7 +65,7 @@
 			?>
 			<?php echo $form->error($producto_imagen,'image_url'); ?>
 		</div>
-
+<!--
 		<div class="form-group <?php if($form->error($model,'status')!=''){ echo 'has-error'; }?>">
 			<?php echo $form->labelEx($model,'status', array('class'=>'control-label')); ?>
 			<div class="input-group">
@@ -73,7 +73,7 @@
 				<?php echo $form->error($model,'status', array('class'=>'help-block')); ?>
 			</div>
 		</div>
-
+-->
 		<br/>
 		<div class="buttons">
 			<?php echo CHtml::submitButton($model->isNewRecord ? 'Guardar' : 'Actualizar', array('class'=>'btn red-stripe uppercase')); ?>

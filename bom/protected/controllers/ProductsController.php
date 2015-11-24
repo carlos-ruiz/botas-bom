@@ -28,7 +28,7 @@ class ProductsController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','loadModalContent'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -84,14 +84,20 @@ class ProductsController extends Controller
 			mkdir($folderImagesPath);
 			chmod($folderImagesPath, 0755);
 		}
+		$formWithErrors = false;
 
 		if(isset($_POST['Products']))
 		{
 			$url = Yii::app()->basePath."/../images/catalogo/";
 			$model->attributes = $_POST['Products'];
-            if($model->save())
+			$model->status = 1;
+			$images = CUploadedFile::getInstances($producto_imagen,'image_url');
+			if(sizeof($images)<1){
+				$producto_imagen->validate();
+				$formWithErrors = true;
+			}
+            if(!$formWithErrors && $model->save())
 	        {
-				$images = CUploadedFile::getInstances($producto_imagen,'image_url');
 				foreach ($images as $image) {
 					$uploadedFile = $image;
 					$tempNameArray = explode('.',$uploadedFile->name);
@@ -103,6 +109,7 @@ class ProductsController extends Controller
 					$producto_imagen->products_id = $model->id;
 					$producto_imagen->image_url = Yii::app()->request->baseUrl."/images/catalogo/".$fileName;
 					if($producto_imagen->validate()){
+
 						$producto_imagen->save();
 					}
 				}
@@ -223,9 +230,18 @@ class ProductsController extends Controller
 	{
 		$this->section = "catalogo";
 		$products = Products::model()->findAll();
+		$categories = Categories::model()->findAll(array('order'=>'name ASC'));
+
 		$this->render('index',array(
 			'products'=>$products,
+			'categories'=>$categories
 		));
+	}
+
+	public function actionLoadModalContent(){
+		$productId=$_POST['id'];
+		$product = $this->loadModel($productId);
+		$this->renderPartial("_productModalContent",array('product'=>$product));
 	}
 
 	/**

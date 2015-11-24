@@ -12,9 +12,7 @@
 			'id',
 			'name',
 			'description',
-			'price',
 			'size',
-			'status',
 			array(
 	            'label'=>'Categorías',
 	            'type'=>'raw',
@@ -22,6 +20,7 @@
 	        ),
 		),
 	)); ?>
+	<br/>
 <div class="row product-images">
 	<?php foreach ($model->images as $image) { ?>
     <img class="col-md-4" src="<?php echo $image->image_url;?>" />

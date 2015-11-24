@@ -171,17 +171,18 @@ showuntil: 4000;">
 				<h2>Categorías</h2>
 				<ul class="list-group margin-bottom-25 sidebar-menu">
 					<?php foreach ($categories as $category) { ?>
-						<li class="list-group-item clearfix"><a href="#"><i class="fa fa-angle-right"></i> <?= $category->name?></a></li>
+						<li class="list-group-item clearfix menu-category"><a href="javascript:void(0)"><i class="fa fa-angle-right"></i> <?= $category->name?></a></li>
 					<?php } ?>
+					<li class="list-group-item clearfix show-all-category"><a href="javascript:void(0)"><i class="fa fa-angle-right"></i> Mostrar todos</a></li>
 				</ul>
 			</div>
 			<!-- END SIDEBAR -->
 			<!-- BEGIN CONTENT -->
 			<div class="col-md-9 col-sm-8">
 				<h2>Más nuevos</h2>
-				<div class="owl-carousel owl-carousel3 flex-container recent-products-container">
+				<div class="owl-carousel flex-container owl-carousel3 recent-products-container">
 					<?php foreach ($newProducts as $product) { ?>
-						<div class="flex-item  white-color border-background">
+						<div class="white-color border-background flex-item">
 							<div class="product-item">
 								<div class="pi-img-wrapper">
 									<img src="<?= $product->images[0]->image_url;?>" class="img-responsive" alt="<?= $product->name; ?>">
@@ -189,6 +190,11 @@ showuntil: 4000;">
 										<a href="<?= $product->images[0]->image_url; ?>" class="btn btn-default fancybox-button">Zoom</a>
 										<a href="#product-pop-up" class="btn btn-default fancybox-fast-view">Ver</a>
 									</div>
+								</div>
+								<div class="product-categories">
+								<?php foreach ($product->categories as $category) { ?>
+									<div class="category"><?= $category->category->name; ?></div>
+								<?php } ?>
 								</div>
 								<h3><a href="<?= Yii::app()->request->baseUrl; ?>/products/<?= $product->id; ?>"><?= $product->name; ?></a></h3>
 								<div class="pi-price">Tallas: <?= $product->size; ?></div>
@@ -207,14 +213,19 @@ showuntil: 4000;">
 			<h2>Productos</h2>
 			<div class="flex-container">
 				<?php foreach ($products as $product) { ?>
-					<div class="col-md-3 flex-item white-color margin">
+					<div class="col-md-3 flex-item white-color margin product-container">
 						<div class="product-item">
 							<div class="pi-img-wrapper">
 								<img src="<?= $product->images[0]->image_url;?>" class="img-responsive" alt="<?= $product->name; ?>">
 								<div>
 									<a href="<?= $product->images[0]->image_url; ?>" class="btn btn-default fancybox-button">Zoom</a>
-									<a href="#product-pop-up" class="btn btn-default fancybox-fast-view">Ver</a>
+									<a href="#product-pop-up" data-id="<?= $product->id; ?>" class="btn btn-default fancybox-fast-view">Ver</a>
 								</div>
+							</div>
+							<div class="product-categories">
+							<?php foreach ($product->categories as $category) { ?>
+								<div class="category filter"><?= $category->category->name; ?></div>
+							<?php } ?>
 							</div>
 							<h3><a href="<?= Yii::app()->request->baseUrl; ?>/products/<?= $product->id; ?>"><?= $product->name; ?></a></h3>
 							<div class="pi-price">Tallas: <?= $product->size; ?></div>
@@ -294,7 +305,7 @@ END STEPS -->
 			<!-- END BOTTOM ABOUT BLOCK -->
 			<!-- BEGIN BOTTOM INFO BLOCK -->
 			<div class="col-md-3 col-sm-6 pre-footer-col">
-				<h2>Information</h2>
+				<h2>Información</h2>
 			<!--
 				<ul class="list-unstyled">
 					<li><i class="fa fa-angle-right"></i> <a href="#">Delivery Information</a></li>
@@ -334,10 +345,5 @@ END STEPS -->
 </div>
 <!-- END PRE-FOOTER -->
 
-<script type="text/javascript">
-	$(window).load(function (){
-		var heightItems = $(".recent-products-container").height();
-		$(".recent-products-container .flex-item").css({'height':heightItems, 'margin':'0 5px', 'display': 'table-cell', 'vertical-align': 'bottom'});
-	});
-</script>
+
 
