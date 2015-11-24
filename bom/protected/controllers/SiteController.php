@@ -3,6 +3,7 @@
 class SiteController extends Controller
 {
 	public $section;
+	public $subSection;
 	/**
 	 * Declares class-based actions.
 	 */

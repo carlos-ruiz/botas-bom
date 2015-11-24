@@ -3,6 +3,7 @@
 class CategoriesController extends Controller
 {
 	public $section;
+	public $subSection;
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
@@ -139,6 +140,8 @@ class CategoriesController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		$this->section = "administration";
+		$this->subSection = "categories";
 		$model=new Categories('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Categories']))

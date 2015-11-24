@@ -4919,3 +4919,74 @@ Stack trace:
 REQUEST_URI=/bom/bom/site/favicon.ico
 HTTP_REFERER=http://localhost/bom/bom/site/index
 ---
+2015/11/23 20:19:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "bom/assets/global/plugins/slider-layer-slider/skins/fullwidth/skin.css"' in C:\xampp\htdocs\bom\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bom\framework\web\CWebApplication.php(141): CWebApplication->runController('bom/assets/glob...')
+#1 C:\xampp\htdocs\bom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bom\bom\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bom/bom/bom/assets/global/plugins/slider-layer-slider/skins/fullwidth/skin.css
+HTTP_REFERER=http://localhost/bom/bom/site/index
+---
+2015/11/23 20:19:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "bom/assets/global/plugins/slider-layer-slider/css/blank.gif"' in C:\xampp\htdocs\bom\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bom\framework\web\CWebApplication.php(141): CWebApplication->runController('bom/assets/glob...')
+#1 C:\xampp\htdocs\bom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bom\bom\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bom/bom/bom/assets/global/plugins/slider-layer-slider/css/blank.gif
+HTTP_REFERER=http://localhost/bom/bom/site/index
+---
+2015/11/23 20:19:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\bom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\bom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\bom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\bom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/bom/bom/products/index
+---
+2015/11/23 20:19:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\bom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\bom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\bom\framework\web\CWebApplication.php(141): CWebApplication->runController('categories/favi...')
+#3 C:\xampp\htdocs\bom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bom/bom/categories/favicon.ico
+HTTP_REFERER=http://localhost/bom/bom/categories/index
+---
+2015/11/23 20:19:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "favicon.ico"' in C:\xampp\htdocs\bom\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bom\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\bom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bom\bom\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bom/bom/favicon.ico
+HTTP_REFERER=http://localhost/bom/bom/
+---
+2015/11/23 20:26:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\bom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\bom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\bom\framework\web\CWebApplication.php(141): CWebApplication->runController('categories/favi...')
+#3 C:\xampp\htdocs\bom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bom/bom/categories/favicon.ico
+HTTP_REFERER=http://localhost/bom/bom/categories/admin
+---
+2015/11/23 20:26:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "favicon.ico" solicitada.' in C:\xampp\htdocs\bom\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\bom\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\xampp\htdocs\bom\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\xampp\htdocs\bom\framework\web\CWebApplication.php(141): CWebApplication->runController('products/favico...')
+#3 C:\xampp\htdocs\bom\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\bom\bom\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/bom/bom/products/favicon.ico
+HTTP_REFERER=http://localhost/bom/bom/products/admin
+---
