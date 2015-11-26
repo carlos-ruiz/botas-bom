@@ -134,3 +134,7 @@ tr.even:hover{
 h1{
 	margin-left: 0px !important;
 }
+
+.zoomImg{
+	background-color: white;
+}

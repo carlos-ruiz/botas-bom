@@ -48,4 +48,5 @@
 		var image_url = $(this).attr('src');
 		$(".product-main-image img").attr('src',image_url);
 	});
+  Layout.initImageZoom();
 </script>

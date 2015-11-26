@@ -188,7 +188,7 @@ showuntil: 4000;">
 									<img src="<?= $product->images[0]->image_url;?>" class="img-responsive" alt="<?= $product->name; ?>">
 									<div>
 										<a href="<?= $product->images[0]->image_url; ?>" class="btn btn-default fancybox-button">Zoom</a>
-										<a href="#product-pop-up" class="btn btn-default fancybox-fast-view">Ver</a>
+										<a href="#product-pop-up" data-id="<?= $product->id; ?>" class="btn btn-default fancybox-fast-view">Ver</a>
 									</div>
 								</div>
 								<div class="product-categories">
