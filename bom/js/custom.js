@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 	$(".fancybox-fast-view").click(function(){
 		$("#product-pop-up").html("Cargando...");
-		$.post("/bom/bom/products/loadModalContent",{id:$(this).data('id')},function(data){
+		$.post("/products/loadModalContent",{id:$(this).data('id')},function(data){
 			$("#product-pop-up").html(data);
 		})
 	});
