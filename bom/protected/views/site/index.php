@@ -84,6 +84,7 @@
 <!-- slide two end -->
 
 <!-- slide three start -->
+<!--
 <div class="ls-slide ls-slide3" data-ls="offsetxin: right; slidedelay: 5000; transition2d: 92,93,105;">
 
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg3.jpg" class="ls-bg" alt="Botas Bom">
@@ -114,12 +115,9 @@ showuntil: 4000;
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/products/index" class="ls-buy">
 	Ver modelos
 </a>
-<!--div class="ls-price">
-	<span>Desde</span>
-	$</sup><strong>450.00<sup></strong>
-</div-->
 </div>
 </div>
+-->
 <!-- slide three end -->
 
 <!-- slide four start -->

@@ -150,3 +150,11 @@ h1{
 .zoomImg{
 	background-color: white;
 }
+
+.information-text {
+	font-size: 14pt;
+}
+
+.overflow-auto {
+	overflow: auto;
+}

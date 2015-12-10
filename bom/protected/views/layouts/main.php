@@ -105,6 +105,7 @@ License: You must have a valid license purchased only from themeforest (the abov
               </li>
               <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout" <?php if($this->section == "logout")echo "style='color:#E02222;'";?>>Salir</a></li>
             <?php } ?>
+            <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/contacto" <?php if($this->section == "contacto")echo "style='color:#E02222;'";?>>Contactanos</a></li>
 
             <!-- BEGIN TOP SEARCH -->
             <li class="menu-search">

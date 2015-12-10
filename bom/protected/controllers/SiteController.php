@@ -136,7 +136,25 @@ class SiteController extends Controller
 		$this->render('vision');
 	}
 
-	public function init(){
+	public function actionContacto()
+	{
+		$this->section = "contacto";
+		$contactForm = new ContactForm;
+
+		if(isset($_POST['ContactForm']))
+		{
+			$contactForm->attributes = $_POST['ContactForm'];
+
+			if($contactForm->validate()){
+				$this->sendEmail($contactForm);
+				$this->redirect(array('index'));
+			}
+		}
+		$this->render('contacto', array('model'=>$contactForm));
+	}
+
+	public function init()
+	{
 		if(Users::model()->count()==0){
 			$admin = new Users;
 			$admin->name = "Admin";
@@ -144,6 +162,22 @@ class SiteController extends Controller
 			$admin->username = "admin";
 			$admin->password = base64_encode("admin");
 			$admin->save();
+		}
+	}
+
+	public function sendEmail($contactForm)
+	{
+		$mail = new YiiMailer();
+		$mail->setView('contact');
+		$mail->setData(array('name' => $contactForm->name, 'subject' => $contactForm->subject, 'email' => $contactForm->email, 'body' => $contactForm->body));
+		$mail->setFrom('info@botasbom.com', 'Botas y Botines BOM');
+		$mail->setTo($contactForm->email);
+		$mail->setCc('car.ruiz90@gmail.com');
+		$mail->setSubject('Contacto botasbom.com');
+		if ($mail->send()) {
+			Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+		} else {
+			Yii::app()->user->setFlash('error','Error while sending email: '.$mail->getError());
 		}
 	}
 }
