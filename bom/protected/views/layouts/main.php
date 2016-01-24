@@ -35,7 +35,7 @@ License: You must have a valid license purchased only from themeforest (the abov
   <meta property="og:image" content="-CUSTOMER VALUE-"><!-- link to image for socio -->
   <meta property="og:url" content="http://botasbom.com">
 
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="<?= Yii::app()->request->baseUrl; ?>/assets/global/img/favicon.png">
 
   <!-- Fonts START -->
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
@@ -76,6 +76,7 @@ License: You must have a valid license purchased only from themeforest (the abov
   <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
   <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
   <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/global/plugins/jquery.multifile.js" type="text/javascript"></script>
+  <script src="<?php echo Yii::app()->request->baseurl; ?>/assets/global/scripts/jquery.ba-bbq.min.js"></script>
 </head>
 <!-- Head END -->
 

@@ -6,7 +6,7 @@
     		<!-- slide-->
     		<div class="ls-slide ls-slide1" data-ls="offsetxin: right; slidedelay: 5000; transition2d: 24,25,27,28;">
 
-    			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg.png"  heigh="495px" class="ls-bg" alt="Botas Bom">
+    			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg.png"  heigh="495px" class="ls-bg" alt="Botas Bom"/>
 
     			<div class="ls-l ls-title" style="top: 96px; left: 35%; white-space: nowrap;" data-ls="
     			fade: true;
@@ -28,10 +28,9 @@
     			easingin: easeOutQuint;
     			delayin: 300;
     			showuntil: 4000;
-    			">¡Son de alta calidad! diseñados para la comodidad </br> de nuestros <strong>clientes</strong>
+    			">¡Son de alta calidad! diseñados para la comodidad </br> de nuestros <strong>clientes</strong></div>
     		</div>
-    	</div>
-    	<!-- slide one end -->
+    		<!-- slide one end -->
 
     	<!-- slide two start -->
     	<div class="ls-slide ls-slide2" data-ls="offsetxin: right; slidedelay: 5000; transition2d: 110,111,112,113;">
@@ -183,7 +182,7 @@ showuntil: 4000;">
 						<div class="white-color border-background flex-item">
 							<div class="product-item">
 								<div class="pi-img-wrapper">
-									<img src="<?= $product->images[0]->image_url;?>" class="img-responsive" alt="<?= $product->name; ?>">
+									<img src="<?= $product->images[0]->image_url;?>" class="img-responsive product-image" alt="<?= $product->name; ?>">
 									<div>
 										<a href="<?= $product->images[0]->image_url; ?>" class="btn btn-default fancybox-button">Zoom</a>
 										<a href="#product-pop-up" data-id="<?= $product->id; ?>" class="btn btn-default fancybox-fast-view">Ver</a>
@@ -214,7 +213,7 @@ showuntil: 4000;">
 					<div class="col-md-3 flex-item white-color margin product-container">
 						<div class="product-item">
 							<div class="pi-img-wrapper">
-								<img src="<?= $product->images[0]->image_url;?>" class="img-responsive" alt="<?= $product->name; ?>">
+								<img src="<?= $product->images[0]->image_url;?>" class="img-responsive product-image" alt="<?= $product->name; ?>">
 								<div>
 									<a href="<?= $product->images[0]->image_url; ?>" class="btn btn-default fancybox-button">Zoom</a>
 									<a href="#product-pop-up" data-id="<?= $product->id; ?>" class="btn btn-default fancybox-fast-view">Ver</a>
@@ -297,8 +296,9 @@ END STEPS -->
 			<!-- BEGIN BOTTOM ABOUT BLOCK -->
 			<div class="col-md-3 col-sm-6 pre-footer-col">
 				<h2>¿Quienes somos?</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sit nonummy nibh euismod tincidunt ut laoreet dolore magna aliquarm erat sit volutpat. Nostrud exerci tation ullamcorper suscipit lobortis nisl aliquip  commodo consequat. </p>
-				<p>Duis autem vel eum iriure dolor vulputate velit esse molestie at dolore.</p>
+				<p> Somos una empresa dedicada a la producción y comercialización de calzado industrial, fundada desde hace 60 años, que cuenta con un método de producción semi artesanal, con una capacidad de producción de 200 pares diarios, en donde cada par brinda una excelente calidad a nuestros usuarios.</p>
+
+				<p>La empresa se encuentra ubicada en el estado de Michoacán, en el Municipio de Huaniqueo de Morales, la cual apoya al desarrollo productivo al generar empleos para los habitantes de la comunidad. </p>
 			</div>
 			<!-- END BOTTOM ABOUT BLOCK -->
 			<!-- BEGIN BOTTOM INFO BLOCK -->
