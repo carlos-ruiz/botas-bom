@@ -173,6 +173,7 @@ class SiteController extends Controller
 		$mail->setFrom('info@botasbom.com', 'Botas y Botines BOM');
 		$mail->setTo($contactForm->email);
 		$mail->setCc('car.ruiz90@gmail.com');
+		$mail->setCc('boom031967@hotmail.com');
 		$mail->setSubject('Contacto botasbom.com');
 		if ($mail->send()) {
 			Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');

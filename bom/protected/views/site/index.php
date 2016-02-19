@@ -6,7 +6,7 @@
     		<!-- slide-->
     		<div class="ls-slide ls-slide1" data-ls="offsetxin: right; slidedelay: 5000; transition2d: 24,25,27,28;">
 
-    			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg.png"  heigh="495px" class="ls-bg" alt="Botas Bom"/>
+    			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg.png"  height="495px" class="ls-bg" alt="Botas Bom"/>
 
     			<div class="ls-l ls-title" style="top: 96px; left: 35%; white-space: nowrap;" data-ls="
     			fade: true;
@@ -80,44 +80,6 @@
     showuntil: 4000;">Ver Catálogo
 </a>
 </div>
-<!-- slide two end -->
-
-<!-- slide three start -->
-<!--
-<div class="ls-slide ls-slide3" data-ls="offsetxin: right; slidedelay: 5000; transition2d: 92,93,105;">
-
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/bg3.jpg" class="ls-bg" alt="Botas Bom">
-
-	<div class="ls-l ls-title" style="top: 83px; left: 33%; white-space: nowrap;" data-ls="
-	fade: true;
-	fadeout: true;
-	durationin: 750;
-	durationout: 750;
-	easingin: easeOutQuint;
-	rotatein: 90;
-	rotateout: -90;
-	scalein: .5;
-	scaleout: .5;
-	showuntil: 4000;
-	">Nuestros productos: <strong>Botas, Botínes y Tennis</strong>
-</div>
-<div class="ls-l" style="top: 333px; left: 33%; white-space: nowrap; font-size: 20px; font: 20px 'Open Sans Light', sans-serif;" data-ls="
-fade: true;
-fadeout: true;
-durationout: 750;
-easingin: easeOutQuint;
-delayin: 300;
-scalein: .8;
-scaleout: .8;
-showuntil: 4000;
-">
-<a href="<?php echo Yii::app()->request->baseUrl; ?>/products/index" class="ls-buy">
-	Ver modelos
-</a>
-</div>
-</div>
--->
-<!-- slide three end -->
 
 <!-- slide four start -->
 <div class="ls-slide ls-slide4" data-ls="offsetxin: right; slidedelay: 5000; transition2d: 110,111,112,113;">
@@ -135,7 +97,7 @@ showuntil: 4000;
 	scalein: .5;
 	scaleout: .5;
 	showuntil: 4000;">
-	Lo más<br>
+	Lo más<br/>
 	pedido
 </div>
 
@@ -236,59 +198,6 @@ showuntil: 4000;">
 	</div>
 </div>
 
-<!-- BEGIN BRANDS
-<div class="brands">
-	<div class="container">
-		<div class="owl-carousel owl-carousel6-brands">
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/canon.jpg" alt="canon" title="canon"></a>
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/esprit.jpg" alt="esprit" title="esprit"></a>
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/gap.jpg" alt="gap" title="gap"></a>
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/next.jpg" alt="next" title="next"></a>
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/puma.jpg" alt="puma" title="puma"></a>
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/zara.jpg" alt="zara" title="zara"></a>
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/canon.jpg" alt="canon" title="canon"></a>
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/esprit.jpg" alt="esprit" title="esprit"></a>
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/gap.jpg" alt="gap" title="gap"></a>
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/next.jpg" alt="next" title="next"></a>
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/puma.jpg" alt="puma" title="puma"></a>
-			<a href="shop-product-list.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/frontend/pages/img/brands/zara.jpg" alt="zara" title="zara"></a>
-		</div>
-	</div>
-</div>
-END BRANDS -->
-
-<!-- BEGIN STEPS
-<div class="steps-block steps-block-red">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 steps-block-col">
-				<i class="fa fa-truck"></i>
-				<div>
-					<h2>Free shipping</h2>
-					<em>Express delivery withing 3 days</em>
-				</div>
-				<span>&nbsp;</span>
-			</div>
-			<div class="col-md-4 steps-block-col">
-				<i class="fa fa-gift"></i>
-				<div>
-					<h2>Daily Gifts</h2>
-					<em>3 Gifts daily for lucky customers</em>
-				</div>
-				<span>&nbsp;</span>
-			</div>
-			<div class="col-md-4 steps-block-col">
-				<i class="fa fa-phone"></i>
-				<div>
-					<h2>477 505 8877</h2>
-					<em>24/7 customer care available</em>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-END STEPS -->
-
 <!-- BEGIN PRE-FOOTER -->
 <div class="pre-footer">
 	<div class="container">
@@ -304,17 +213,6 @@ END STEPS -->
 			<!-- BEGIN BOTTOM INFO BLOCK -->
 			<div class="col-md-3 col-sm-6 pre-footer-col">
 				<h2>Información</h2>
-			<!--
-				<ul class="list-unstyled">
-					<li><i class="fa fa-angle-right"></i> <a href="#">Delivery Information</a></li>
-					<li><i class="fa fa-angle-right"></i> <a href="#">Customer Service</a></li>
-					<li><i class="fa fa-angle-right"></i> <a href="#">Order Tracking</a></li>
-					<li><i class="fa fa-angle-right"></i> <a href="#">Shipping &amp; Returns</a></li>
-					<li><i class="fa fa-angle-right"></i> <a href="contacts.html">Contact Us</a></li>
-					<li><i class="fa fa-angle-right"></i> <a href="#">Careers</a></li>
-					<li><i class="fa fa-angle-right"></i> <a href="#">Payment Methods</a></li>
-				</ul>
-				-->
 			</div>
 			<!-- END INFO BLOCK -->
 
@@ -329,11 +227,10 @@ END STEPS -->
 			<div class="col-md-3 col-sm-6 pre-footer-col">
 				<h2>Contacto</h2>
 				<address class="margin-bottom-40">
-					Ana María Gallaga 123<br>
-					Huaniqueo de Morales, Mich. MX<br>
-					Teléfono: 300 323 3456<br>
-					Fax: 300 323 1456<br>
-					Email: <a href="mailto:info@botasbom.com">info@botasbom.com</a><br>
+					Ana María Gallaga 123<br/>
+					Huaniqueo de Morales, Mich. MX<br/>
+					Teléfono: 01 454 382 04 92<br/>
+					Email: <a href="mailto:info@botasbom.com">info@botasbom.com</a><br/>
 					Skype: <a href="skype:metronic">botasbom</a>
 				</address>
 			</div>
