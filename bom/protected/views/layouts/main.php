@@ -102,6 +102,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                   <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/products/admin" <?php if($this->subSection == "products")echo "style='color:#E02222;'";?>>Productos</a></li>
                   <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/categories/admin" <?php if($this->subSection == "categories")echo "style='color:#E02222;'";?>>Categorías</a></li>
+                  <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/bannerImages/admin" <?php if($this->subSection == "banner")echo "style='color:#E02222;'";?>>Banner</a></li>
                 </ul>              
               </li>
               <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout" <?php if($this->section == "logout")echo "style='color:#E02222;'";?>>Salir</a></li>

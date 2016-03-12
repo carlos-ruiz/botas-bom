@@ -8,6 +8,7 @@
 		<h1>Administrar productos</h1>
 	</div>
 	<div class="text-right">
+		<?php echo CHtml::link('Imagenes banner', array('bannerImages/admin'), array('class'=>'btn red-haze btn-outline btn-circle btn-sm')); ?>
 		<?php echo CHtml::link('Agregar producto', array('products/create'), array('class'=>'btn red-haze btn-outline btn-circle btn-sm')); ?>
 		<?php echo CHtml::link('Administrar categorías', array('categories/admin'), array('class'=>'btn red-haze btn-outline btn-circle btn-sm')); ?>
 	</div>

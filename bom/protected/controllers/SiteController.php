@@ -35,11 +35,13 @@ class SiteController extends Controller
 		$newProducts = Products::model()->findAll(array('order'=>'id DESC', 'limit' => 5));
 		$products = Products::model()->findAll();
 		$categories = Categories::model()->findAll(array('order'=>'name ASC'));
+		$bannerImages = BannerImages::model()->findAll('active=1');
 
 		$this->render('index', array(
 			'newProducts'=>$newProducts,
 			'products'=>$products,
-			'categories'=>$categories
+			'categories'=>$categories,
+			'bannerImages'=>$bannerImages,
 			));
 	}
 
@@ -181,4 +183,5 @@ class SiteController extends Controller
 			Yii::app()->user->setFlash('error','Error while sending email: '.$mail->getError());
 		}
 	}
+
 }
