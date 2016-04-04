@@ -98,7 +98,7 @@ License: You must have a valid license purchased only from themeforest (the abov
             <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/mision" <?php if($this->section == "mision")echo "style='color:#E02222;'";?>>Misión</a></li>
             <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/vision" <?php if($this->section == "vision")echo "style='color:#E02222;'";?>>Visión</a></li>
             <?php if(!Yii::app()->user->isGuest){ ?>
-              <li><a <?php if($this->section == "administration")echo "style='color:#E02222;'";?>> Administrar</a>
+              <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/products/admin" <?php if($this->section == "administration")echo "style='color:#E02222;'";?>> Administrar</a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                   <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/products/admin" <?php if($this->subSection == "products")echo "style='color:#E02222;'";?>>Productos</a></li>
                   <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/categories/admin" <?php if($this->subSection == "categories")echo "style='color:#E02222;'";?>>Categorías</a></li>
