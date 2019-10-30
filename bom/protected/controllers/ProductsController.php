@@ -209,6 +209,10 @@ class ProductsController extends Controller
 	public function actionDelete($id)
 	{
 		$product = $this->loadModel($id);
+		
+		#Load all product categories
+		$categories = ProductsHasCategories::model()->findAll('id_products=?',array($product->id));
+
 		$baseUrl = Yii::app()->request->baseUrl;
 		foreach ($product->images as $image) {
 			$filePath = str_replace($baseUrl.'/images', 'images', $image->image_url);
@@ -217,6 +221,11 @@ class ProductsController extends Controller
 			}
 			$image->delete();
 		}
+
+		foreach ($categories as $category) {
+			$category->delete();
+		}
+
 		$product->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
