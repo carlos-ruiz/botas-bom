@@ -2692,3 +2692,515 @@ Stack trace:
 REQUEST_URI=/botasbom/bom/bom/assets/global/plugins/slider-layer-slider/css/blank.gif
 HTTP_REFERER=http://localhost/botasbom/bom/site/index
 ---
+2021/07/26 14:22:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'techincm_botasbo'@'172.20.0.3' (using password: YES)' in /var/www/html/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /var/www/html/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /var/www/html/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /var/www/html/framework/base/CModule.php(394): CDbConnection->init()
+#3 /var/www/html/framework/base/CApplication.php(458): CModule->getComponent('db')
+#4 /var/www/html/framework/db/ar/CActiveRecord.php(637): CApplication->getDb()
+#5 /var/www/html/framework/db/ar/CActiveRecord.php(670): CActiveRecord->getDbConnection()
+#6 /var/www/html/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/bom/protected/controllers/SiteController.php(160): CActiveRecord->count()
+#8 /var/www/html/framework/web/CWebApplication.php(281): SiteController->init()
+#9 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#10 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /var/www/html/bom/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/
+---
+2021/07/26 14:22:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "favicon.ico"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541530525860.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541530525860.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541529501785.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541529501785.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541526333399.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541526333399.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1620677517429.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1620677517429.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541525976161.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541525976161.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541529329191.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541529329191.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1617652661160.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1617652661160.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541526469427.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541526469427.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541532565404.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541532565404.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541529208336.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541529208336.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1620677114246.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1620677114246.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541529064657.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541529064657.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/154152987191.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/154152987191.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/banner/1541705390744.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/banner/1...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/banner/1541705390744.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/154152960941.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/154152960941.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541530629298.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541530629298.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541525076465.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541525076465.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541530156870.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541530156870.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541530712320.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541530712320.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541529965871.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541529965871.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1620677233708.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1620677233708.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541525744249.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541525744249.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1620676880166.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1620676880166.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541526567994.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541526567994.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541532283763.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541532283763.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/banner/1541706887947.jpg"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/banner/1...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/banner/1541706887947.jpg
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/banner/1541707536704.jpg"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/banner/1...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/banner/1541707536704.jpg
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541532640274.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541532640274.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541533080682.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541533080682.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/154153317769.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/154153317769.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541533272131.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541533272131.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541533416291.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541533416291.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541533564854.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541533564854.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541534098597.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541534098597.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541534284472.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541534284472.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/154153435422.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/154153435422.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541534469297.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541534469297.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541534593933.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541534593933.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541534953771.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541534953771.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/154153534077.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/154153534077.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541535471520.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541535471520.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541535841554.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541535841554.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541535941817.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541535941817.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/154153601566.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/154153601566.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541536298911.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541536298911.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541536449437.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541536449437.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/154153694151.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/154153694151.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541536778349.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541536778349.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541537043130.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541537043130.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1541537145954.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1541537145954.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1617651774557.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1617651774557.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1617652284804.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1617652284804.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/1617652414498.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/1617652414498.JPG
+HTTP_REFERER=http://localhost/
+---
+2021/07/26 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/catalogo/161765257781.JPG"' in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/catalogo...')
+#1 /var/www/html/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/bom/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/catalogo/161765257781.JPG
+HTTP_REFERER=http://localhost/
+---
